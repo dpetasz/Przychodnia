@@ -38,7 +38,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,8 +95,25 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\PrzychodniaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PrzychodniaModel.edmx</DependentUpon>
+      <LastGenOutput>PrzychodniaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\PrzychodniaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PrzychodniaModel.edmx</DependentUpon>
+      <LastGenOutput>PrzychodniaModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\PrzychodniaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PrzychodniaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\PrzychodniaModel.edmx.diagram">
+      <DependentUpon>PrzychodniaModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -95,9 +122,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Badanie.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lekarz.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pacjent.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pokazPacjent_Result.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pracownik.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrzychodniaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrzychodniaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrzychodniaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrzychodniaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrzychodniaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Specjalizacja.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WizytaBadanie.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WizytaLekarz.cs">
+      <DependentUpon>PrzychodniaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -120,7 +190,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

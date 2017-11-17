@@ -16,3 +16,7 @@ C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\bin\System.Web.
 C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\obj\Debug\PrzychodniaPOZ.csprojResolveAssemblyReference.cache
 C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\obj\Debug\PrzychodniaPOZ.dll
 C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\obj\Debug\PrzychodniaPOZ.pdb
+C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\bin\EntityFramework.dll
+C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\bin\EntityFramework.SqlServer.dll
+C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\bin\EntityFramework.xml
+C:\Users\dpeta\Desktop\Przychodnia\PrzychodniaPOZ\PrzychodniaPOZ\bin\EntityFramework.SqlServer.xml

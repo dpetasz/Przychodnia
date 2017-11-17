@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32d8c5866e1e40a79d822b62dff7b2e8" Name="Diagram1">
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.Badanie" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.Lekarz" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.Pacjent" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.Pracownik" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.Specjalizacja" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.WizytaBadanie" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PrzychodniaPOZModel.WizytaLekarz" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="PrzychodniaPOZModel.FK_WizytaBadanie_Badanie" ManuallyRouted="false" />
+        <AssociationConnector Association="PrzychodniaPOZModel.FK_WizytaLekarz_Lekarz" ManuallyRouted="false" />
+        <AssociationConnector Association="PrzychodniaPOZModel.FK_WizytaBadanie_Pacjent" ManuallyRouted="false" />
+        <AssociationConnector Association="PrzychodniaPOZModel.FK_WizytaLekarz_Pacjent" ManuallyRouted="false" />
+        <AssociationConnector Association="PrzychodniaPOZModel.FK_WizytaLekarz_Specjalizacja" ManuallyRouted="false" />
+        <AssociationConnector Association="PrzychodniaPOZModel.LekSpec" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
